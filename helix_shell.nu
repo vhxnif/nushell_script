@@ -1,1 +1,1 @@
-use /Users/chen/.dev/nushell/im_select.nu *
+use ./im_select.nu *
