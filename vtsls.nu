@@ -1,9 +1,8 @@
 #!/usr/bin/env nu
 def main [] {
     let home_dir = $env.HOME? | default ($env.USERPROFILE? | default "")
-    let os_name = $env.OS? | default ""
     let host_name = (sys host).name
-    let is_windows = $os_name | str contains "Windows"
+    let is_windows = $host_name | str contains "Windows"
     let is_mac = $host_name | str contains "Darwin"
     let config_path: list<string> = if $is_windows {
       [AppData Local Zed languages]
